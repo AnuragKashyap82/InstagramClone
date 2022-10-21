@@ -46,7 +46,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 checkUser();
             }
-        }, 3000);
+        }, 500);
     }
 
     private void checkUser() {

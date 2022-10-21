@@ -14,8 +14,7 @@
         android:layout_marginTop="35dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/instagram">
-    </com.airbnb.lottie.LottieAnimationView>
+        app:lottie_rawRes="@raw/instagram"></com.airbnb.lottie.LottieAnimationView>
 
     <TextView
         android:layout_width="wrap_content"
