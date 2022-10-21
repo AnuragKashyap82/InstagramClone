@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:id="@+id/topRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/ic_person_filled_black"
+            android:backgroundTint="@color/black"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/red"
+            app:civ_border_width="1dp"
+            app:tint="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/profileIv">
+
+            <ImageView
+                android:id="@+id/moreBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_more_black"
+                android:backgroundTint="@color/black" />
+
+            <TextView
+                android:id="@+id/usernameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:text="Anurag_kashyap_82"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/topRl"
+        android:layout_marginTop="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/bottomRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/imageView">
+
+        <ImageView
+            android:id="@+id/likeBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_heart_black"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/commentBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:layout_toEndOf="@id/likeBtn"
+            android:src="@drawable/ic_comment_black"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/shareBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:layout_toEndOf="@id/commentBtn"
+            android:background="@drawable/ic_send_black"
+            android:backgroundTint="@color/black"
+            android:padding="15dp" />
+
+        <ImageView
+            android:id="@+id/savePostBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="18dp"
+            android:src="@drawable/ic_save_black"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noLikesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottomRl"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:text="2468 likes"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/captionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noLikesTv"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:text="jkfhbjsfhgoihgoiaperhgghguierghagujgttuigrtui"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/captionTv"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text="2/2/2002 02:42 am"
+        android:textColor="@color/colorGray02"
+        android:textSize="10dp" />
+
+</RelativeLayout>

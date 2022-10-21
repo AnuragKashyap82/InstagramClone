@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Instagram</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="forgot_your_login_details_get_help_logging_in">Forgot your login details? <b>Get help logging in</b>.</string>
+    <string name="dont_t_have_an_account_sign_up">Dont\'t have an account?<b> Sign Up</b> </string>
+    <string name="already_have_an_account_log_in">Already have an account?<b> Log in</b></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.UserProfileFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="1dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/usernameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/backBtn"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:maxWidth="300dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="username"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/moreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ic_more_black"
+            android:backgroundTint="@color/black"
+            android:padding="15dp" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileIv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/black"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_outline_black"
+                app:civ_border_color="@color/colorGray02"
+                app:civ_border_width="1dp"
+                app:tint="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/IvLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toEndOf="@id/profileIv"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:elevation="10dp">
+
+                    <TextView
+                        android:id="@+id/postTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:text="N/A"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/postT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/postTv"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/segoe_ui_regular"
+                        android:text="Posts"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/followersRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/followersTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/followerT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/followersTv"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/segoe_ui_regular"
+                        android:text="Followers"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/followingRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/followingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/timeTableTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/followingTv"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/segoe_ui_regular"
+                        android:text="Following"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileIv"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:text="name"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/bioTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTv"
+                android:layout_marginEnd="45dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/websiteTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bioTv"
+                android:layout_marginEnd="45dp"
+                android:layout_marginStart="15dp"
+                android:autoLink="all"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:text=""
+                android:textColor="@color/colorPrimary" />
+
+           <LinearLayout
+               android:id="@+id/btnLl"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_marginEnd="50dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginTop="10dp"
+               android:weightSum="2"
+               android:layout_below="@id/websiteTv">
+
+               <Button
+                   android:id="@+id/followBtn"
+                   android:layout_width="0dp"
+                   android:layout_height="38dp"
+                   android:background="@drawable/button_background"
+                   android:fontFamily="@font/segoe_ui_bold"
+                   android:text='Follow'
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:textSize="14sp"
+                   android:layout_weight="1"
+                   android:layout_marginEnd="5dp"
+                   app:backgroundTint="@color/colorPrimary" />
+
+               <Button
+                   android:id="@+id/msgBtn"
+                   android:layout_width="0dp"
+                   android:layout_height="38dp"
+                   android:background="@drawable/button_background"
+                   android:fontFamily="@font/segoe_ui_bold"
+                   android:text='Message'
+                   android:textAllCaps="false"
+                   android:layout_marginStart="5dp"
+                   android:textColor="@color/black"
+                   android:textSize="14sp"
+                   android:layout_weight="1"
+                   app:backgroundTint="@color/colorGray00" />
+
+           </LinearLayout>
+
+            <ImageView
+                android:id="@+id/discoverPeopleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/websiteTv"
+                android:layout_marginStart="-40dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/btnLl"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/blue01"
+                android:padding="3dp"
+                android:src="@drawable/ic_person_filled_black"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_profile_post"
+                android:backgroundTint="@color/black"
+                android:layout_below="@id/btnLl"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_centerHorizontal="false"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/icon"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_circle00"
+        android:backgroundTint="@color/white"
+        android:elevation="45dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

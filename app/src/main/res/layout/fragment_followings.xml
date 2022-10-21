@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.FollowingsFragment">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_black"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:tint="@color/black"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/usernameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="anurag_kashyap_82"
+        android:textColor="@color/black"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:textSize="24sp"
+        android:layout_toEndOf="@id/backBtn"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/followersCountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameTv"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:text="N/A"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/folloTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameTv"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/followersCountTv"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:text="followings"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height=".8dp"
+        android:background="@color/black"
+        android:layout_below="@id/followersCountTv"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/searchEt"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_rect_01"
+                android:backgroundTint="@color/colorGray00"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_search_black"
+                android:gravity="center_vertical"
+                android:hint="serach"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorGray02" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/followersRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/searchEt"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_followers"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

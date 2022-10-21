@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MessageViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="1dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/videoCallBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_video_call_black"
+            android:backgroundTint="@color/black"
+            android:padding="15dp" />
+
+
+        <ImageView
+            android:id="@+id/createBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/videoCallBtn"
+            android:background="@drawable/ic_call_black"
+            android:backgroundTint="@color/black"
+            android:padding="15dp" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/profileIv"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:maxWidth="300dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:text="Anurag Kashyap"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/usernameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/profileIv"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:maxWidth="300dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="0dp"
+            android:text="Anurag Kashyap"
+            android:textColor="@color/colorGray02"
+            android:textSize="14sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/backBtn"
+            android:background="@drawable/ic_person_outline_black"
+            android:backgroundTint="@color/colorGray01"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/red"
+            app:civ_border_width="1dp"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/bottomRl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileIv2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/black"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_outline_black"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="1dp"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/nameTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileIv2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:maxWidth="300dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Anurag Kashyap"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_below="@id/nameTv2"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/usernameTv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/nameTv2"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:maxWidth="300dp"
+                    android:layout_marginEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text="Anurag Kashyap"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:maxWidth="300dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:text="Instagram"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_below="@id/ll1"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/followersTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:maxWidth="300dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="782 followers"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorGray02"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/noPostTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/segoe_ui_regular"
+                    android:maxWidth="300dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_weight="1"
+                    android:text="0 posts"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/colorGray02"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/profileViewBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_below="@id/ll2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="45dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:text="View Profile"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:backgroundTint="@color/colorGray00" />
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottomRl"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/shape_rect_02"
+        android:backgroundTint="@color/colorGray00">
+
+        <ImageView
+            android:id="@+id/cameraBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_circle00"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="10dp"
+            android:src="@drawable/ic_camera_black"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/galleryBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="3dp"
+            android:src="@drawable/ic_camera_black"
+            app:tint="@color/black" />
+
+        <EditText
+            android:id="@+id/msgBoxEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/cameraBtn"
+            android:layout_toStartOf="@id/galleryBtn"
+            android:background="@null"
+            android:hint="Message"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

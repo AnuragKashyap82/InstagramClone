@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_person_filled_black" />
+
+        <com.devlomi.circularstatusview.CircularStatusView
+            android:id="@+id/circular_status_view"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            app:portion_color="@color/red"
+            app:portion_spacing="4dp"
+            app:portion_width="2dp"
+            app:portions_count="10" />
+
+        <TextView
+            android:id="@+id/usernameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/circular_status_view"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:maxLines="1"
+            android:layout_marginTop="5dp"
+            android:text="anurag_kashyap_82"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

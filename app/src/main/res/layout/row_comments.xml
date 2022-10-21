@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:padding="3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileIv"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/ic_person_filled_black"
+        android:backgroundTint="@color/black"
+        android:scaleType="centerCrop"
+        app:civ_border_color="@color/red"
+        app:civ_border_width="1dp"
+        app:tint="@color/black" />
+
+    <ImageView
+        android:id="@+id/likeCommentBtn"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_heart_black"
+        app:tint="@color/colorGray02" />
+
+
+    <TextView
+        android:id="@+id/commentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/profileIv"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:text="jjoqwdnfoqrnfoiefhjqwdncjcvoievnerlkvneroiv"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date"
+        android:layout_below="@id/commentTv"
+        android:layout_toEndOf="@id/profileIv"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:padding="3dp"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:textColor="@color/colorGray02"/>
+
+    <TextView
+        android:id="@+id/replyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reply"
+        android:layout_below="@id/commentTv"
+        android:layout_toEndOf="@id/dateTv"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:padding="3dp"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:textColor="@color/colorGray02"/>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SplashActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="35dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/instagram">
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/anurag"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:text="from"
+        android:textColor="@color/colorGray02"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/anurag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anurag Kashyap"
+        android:textColor="@color/red"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:textSize="22dp"/>
+
+
+</RelativeLayout>
